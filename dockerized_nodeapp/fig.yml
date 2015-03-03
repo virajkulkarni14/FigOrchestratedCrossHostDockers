@@ -1,0 +1,11 @@
+web:
+  build: ./
+  working_dir: /src/src
+  command: node app.js
+  ports:
+    - "49160:3000"
+  links:
+    - db
+
+db:
+  image: virajkulkarni14/dockerized_mongodb
